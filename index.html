@@ -34,13 +34,15 @@
     <div class="nav-inner">
       <span class="nav-logo">Nathan Davie</span>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#competencies">Competencies</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Background</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#competencies" data-i18n="nav.competencies">Competencies</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="nav-right">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">FR</button>
+        <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      </div>
     </div>
   </nav>
 
@@ -51,10 +53,10 @@
         <img src="headshot.jpg" alt="Nathan Davie" class="hero-photo" />
       </div>
       <div class="hero-content">
-        <p class="hero-eyebrow">Director Analyst – IT Services &nbsp;·&nbsp; Gartner</p>
+        <p class="hero-eyebrow" data-i18n="hero.eyebrow">Director Analyst – IT Services &nbsp;·&nbsp; Gartner</p>
         <h1>Nathan Davie</h1>
-        <p class="hero-subtitle">Sourcing, Procurement &amp; Vendor Management</p>
-        <p class="hero-tags">
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Sourcing, Procurement &amp; Vendor Management</p>
+        <p class="hero-tags" data-i18n="hero.tags">
           <span>IT Sourcing &amp; Contracting</span>
           <span>Global Service Providers</span>
           <span>AI / GenAI / Cloud</span>
@@ -62,7 +64,7 @@
           <span>20+ Years Experience</span>
           <span>Ottawa, Ontario</span>
         </p>
-        <a href="#contact" class="btn-primary">Get in Touch</a>
+        <a href="#contact" class="btn-primary" data-i18n="hero.cta">Get in Touch</a>
       </div>
     </div>
     <div class="hero-scroll-hint">&#8595;</div>
@@ -71,22 +73,22 @@
   <!-- ===== ABOUT ===== -->
   <section id="about" class="section">
     <div class="container">
-      <div class="section-label">Profile</div>
-      <h2 class="section-title">Analyst. Advisor.<br/>Thought Leader.</h2>
-      <p class="about-text">
+      <div class="section-label" data-i18n="about.label">Profile</div>
+      <h2 class="section-title" data-i18n="about.title">Analyst. Advisor.<br/>Thought Leader.</h2>
+      <p class="about-text" data-i18n="about.text1">
         Director Analyst at <strong>Gartner</strong>, focused on IT Services Sourcing, Procurement, and Vendor Management.
         I produce thought-leading research and guide enterprise clients through mission-critical decisions — from
         RFP design and contract negotiation to global service provider selection across software engineering,
         cloud, AI/GenAI, ERP, and CRM markets.
       </p>
-      <p class="about-text">
+      <p class="about-text" data-i18n="about.text2">
         Grounded in <strong>20+ years</strong> of hands-on experience in IT strategy, enterprise architecture,
         and federal government consulting, I bring a rare combination of practitioner depth and
         research rigour. My work spans sourcing advisory, written research (Lead Author, 8+ notes per year),
         webinars, conference presentations, and direct client engagement across Gartner's global network
         of 14,000+ client enterprises in 90+ countries.
       </p>
-      <div class="about-pills">
+      <div class="about-pills" data-i18n="about.pills">
         <span>IT Sourcing &amp; Procurement</span>
         <span>Vendor Management</span>
         <span>RFP &amp; Contract Review</span>
@@ -102,38 +104,38 @@
   <!-- ===== COMPETENCIES ===== -->
   <section id="competencies" class="section section-dark">
     <div class="container">
-      <div class="section-label">Expertise</div>
-      <h2 class="section-title">Core Competencies</h2>
+      <div class="section-label" data-i18n="comp.label">Expertise</div>
+      <h2 class="section-title" data-i18n="comp.title">Core Competencies</h2>
       <div class="competencies-grid">
 
         <div class="comp-card">
           <div class="comp-icon" aria-hidden="true">&#128270;</div>
-          <h3>IT Sourcing &amp; Procurement</h3>
-          <p>RFP Design &amp; Review, SOW Analysis, SLA/KPI Frameworks, Vendor Negotiations, Outsourcing Strategy</p>
+          <h3 data-i18n="comp.card1.title">IT Sourcing &amp; Procurement</h3>
+          <p data-i18n="comp.card1.desc">RFP Design &amp; Review, SOW Analysis, SLA/KPI Frameworks, Vendor Negotiations, Outsourcing Strategy</p>
         </div>
 
         <div class="comp-card">
           <div class="comp-icon" aria-hidden="true">&#127760;</div>
-          <h3>Global Service Providers</h3>
-          <p>Incumbent &amp; Disruptor Landscape, Nearshore/Offshore Delivery, Provider Evaluation &amp; Selection</p>
+          <h3 data-i18n="comp.card2.title">Global Service Providers</h3>
+          <p data-i18n="comp.card2.desc">Incumbent &amp; Disruptor Landscape, Nearshore/Offshore Delivery, Provider Evaluation &amp; Selection</p>
         </div>
 
         <div class="comp-card">
           <div class="comp-icon" aria-hidden="true">&#129504;</div>
-          <h3>Emerging Technology</h3>
-          <p>AI, GenAI, Cloud, DevOps, LCAP/RPA, API Integration, Custom Software, QA &amp; Testing</p>
+          <h3 data-i18n="comp.card3.title">Emerging Technology</h3>
+          <p data-i18n="comp.card3.desc">AI, GenAI, Cloud, DevOps, LCAP/RPA, API Integration, Custom Software, QA &amp; Testing</p>
         </div>
 
         <div class="comp-card">
           <div class="comp-icon" aria-hidden="true">&#128196;</div>
-          <h3>Enterprise Applications</h3>
-          <p>ERP (SAP, Oracle, MS Dynamics), CRM/HCM (Workday, Salesforce), Enterprise Architecture</p>
+          <h3 data-i18n="comp.card4.title">Enterprise Applications</h3>
+          <p data-i18n="comp.card4.desc">ERP (SAP, Oracle, MS Dynamics), CRM/HCM (Workday, Salesforce), Enterprise Architecture</p>
         </div>
 
         <div class="comp-card">
           <div class="comp-icon" aria-hidden="true">&#128214;</div>
-          <h3>Thought Leadership &amp; Research</h3>
-          <p>Lead Author (8+ notes/year), 300+ Client Interactions/year, Webinars, Conference Presentations, Strategic Writing</p>
+          <h3 data-i18n="comp.card5.title">Thought Leadership &amp; Research</h3>
+          <p data-i18n="comp.card5.desc">Lead Author (8+ notes/year), 300+ Client Interactions/year, Webinars, Conference Presentations, Strategic Writing</p>
         </div>
 
       </div>
@@ -143,41 +145,41 @@
   <!-- ===== EXPERIENCE ===== -->
   <section id="experience" class="section">
     <div class="container">
-      <div class="section-label">Career</div>
-      <h2 class="section-title">Professional Experience</h2>
+      <div class="section-label" data-i18n="exp.label">Career</div>
+      <h2 class="section-title" data-i18n="exp.title">Professional Experience</h2>
 
       <!-- Gartner spotlight -->
       <div class="gartner-spotlight">
         <div class="gartner-spotlight-header">
           <div class="gartner-badge">Gartner</div>
           <div>
-            <h3>Director Analyst – IT Services</h3>
-            <p>Sourcing, Procurement &amp; Vendor Management</p>
+            <h3 data-i18n="gartner.h3">Director Analyst – IT Services</h3>
+            <p data-i18n="gartner.subtitle">Sourcing, Procurement &amp; Vendor Management</p>
           </div>
         </div>
         <div class="gartner-stats">
           <div class="gartner-stat">
             <span class="gartner-stat-num">8+</span>
-            <span class="gartner-stat-label">Advisory Notes<br/>per Year (Lead Author)</span>
+            <span class="gartner-stat-label" data-i18n="gartner.stat1">Advisory Notes<br/>per Year (Lead Author)</span>
           </div>
           <div class="gartner-stat">
             <span class="gartner-stat-num">300+</span>
-            <span class="gartner-stat-label">Client Interactions<br/>per Year</span>
+            <span class="gartner-stat-label" data-i18n="gartner.stat2">Client Interactions<br/>per Year</span>
           </div>
           <div class="gartner-stat">
             <span class="gartner-stat-num">14k+</span>
-            <span class="gartner-stat-label">Client Enterprises<br/>Worldwide</span>
+            <span class="gartner-stat-label" data-i18n="gartner.stat3">Client Enterprises<br/>Worldwide</span>
           </div>
           <div class="gartner-stat">
             <span class="gartner-stat-num">90+</span>
-            <span class="gartner-stat-label">Countries<br/>Served</span>
+            <span class="gartner-stat-label" data-i18n="gartner.stat4">Countries<br/>Served</span>
           </div>
           <div class="gartner-stat">
             <span class="gartner-stat-num">10+</span>
-            <span class="gartner-stat-label">Technology Domains<br/>(AI, ERP, Cloud &amp; more)</span>
+            <span class="gartner-stat-label" data-i18n="gartner.stat5">Technology Domains<br/>(AI, ERP, Cloud &amp; more)</span>
           </div>
         </div>
-        <div class="gartner-topics">
+        <div class="gartner-topics" data-i18n="gartner.topics">
           <span>RFP &amp; SOW Review</span>
           <span>SLA / KPI Analysis</span>
           <span>Global Service Providers</span>
@@ -196,10 +198,10 @@
         <div class="timeline-item">
           <div class="timeline-marker featured"></div>
           <div class="timeline-content">
-            <span class="timeline-date">September 2025 – Present</span>
-            <h3>Director Analyst – IT Services</h3>
-            <p class="timeline-org">Gartner – Sourcing, Procurement &amp; Vendor Management</p>
-            <ul>
+            <span class="timeline-date" data-i18n="job1.date">September 2025 – Present</span>
+            <h3 data-i18n="job1.title">Director Analyst – IT Services</h3>
+            <p class="timeline-org" data-i18n="job1.org">Gartner – Sourcing, Procurement &amp; Vendor Management</p>
+            <ul data-i18n="job1.bullets">
               <li>Creates thought-leading research and guides clients in the Software Engineering and IT application services market with a focus on sourcing practices, contracting, and negotiations.</li>
               <li>Advises clients on sourcing issues, RFPs, and provider proposals; delivers actionable guidance through inquiries, presentations, webinars, and written content.</li>
               <li>Produces high-quality advisory notes as Lead Author (8+ per year), covering areas including AI/GenAI, cloud, agile, custom software, analytics, CX, API, and QA.</li>
@@ -213,10 +215,10 @@
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-date">November 2021 – September 2025</span>
-            <h3>Senior Business Consultant</h3>
-            <p class="timeline-org">Treasury Board Secretariat (TBS) – Office of the Chief HR Officer (OCHRO)</p>
-            <ul>
+            <span class="timeline-date" data-i18n="job2.date">November 2021 – September 2025</span>
+            <h3 data-i18n="job2.title">Senior Business Consultant</h3>
+            <p class="timeline-org" data-i18n="job2.org">Treasury Board Secretariat (TBS) – Office of the Chief HR Officer (OCHRO)</p>
+            <ul data-i18n="job2.bullets">
               <li>Advise senior executives on government relations strategies, public policy development, and regulatory compliance.</li>
               <li>Conduct policy analysis on HR systems and federal initiatives, ensuring alignment with government priorities.</li>
               <li>Develop stakeholder engagement strategies, fostering collaboration with federal departments and external partners.</li>
@@ -227,10 +229,10 @@
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-date">May 2021 – January 2022</span>
-            <h3>Senior Business Consultant</h3>
-            <p class="timeline-org">Public Services and Procurement Canada (PSPC) – Digital Services Branch (DSB)</p>
-            <ul>
+            <span class="timeline-date" data-i18n="job3.date">May 2021 – January 2022</span>
+            <h3 data-i18n="job3.title">Senior Business Consultant</h3>
+            <p class="timeline-org" data-i18n="job3.org">Public Services and Procurement Canada (PSPC) – Digital Services Branch (DSB)</p>
+            <ul data-i18n="job3.bullets">
               <li>Delivered strategic advisory on government engagement, public policy alignment, and communications strategies for digital services.</li>
               <li>Conducted detailed policy analysis on technology initiatives, advising on regulatory compliance and strategic communications.</li>
             </ul>
@@ -240,10 +242,10 @@
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-date">December 2019 – May 2021</span>
-            <h3>Senior Business Transformation Consultant</h3>
-            <p class="timeline-org">Public Services and Procurement Canada (PSPC) – Digital Services Branch (DSB)</p>
-            <ul>
+            <span class="timeline-date" data-i18n="job4.date">December 2019 – May 2021</span>
+            <h3 data-i18n="job4.title">Senior Business Transformation Consultant</h3>
+            <p class="timeline-org" data-i18n="job4.org">Public Services and Procurement Canada (PSPC) – Digital Services Branch (DSB)</p>
+            <ul data-i18n="job4.bullets">
               <li>Led the design and implementation of government relations strategies to support technology adoption and service delivery.</li>
               <li>Conducted scenario planning to navigate complex policy issues, delivering clear strategic guidance.</li>
             </ul>
@@ -253,10 +255,10 @@
         <div class="timeline-item">
           <div class="timeline-marker founder"></div>
           <div class="timeline-content">
-            <span class="timeline-date">June 2012 – March 2023</span>
-            <h3>Founder</h3>
-            <p class="timeline-org">Easy Manifest Inc. – Ottawa, ON</p>
-            <ul>
+            <span class="timeline-date" data-i18n="job5.date">June 2012 – March 2023</span>
+            <h3 data-i18n="job5.title">Founder</h3>
+            <p class="timeline-org" data-i18n="job5.org">Easy Manifest Inc. – Ottawa, ON</p>
+            <ul data-i18n="job5.bullets">
               <li>Developed a SaaS platform for commercial freight carriers ensuring compliance with government regulations.</li>
               <li>Advised clients on regulatory compliance, policy navigation, and stakeholder engagement.</li>
             </ul>
@@ -266,10 +268,10 @@
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-date">September 2017 – October 2018</span>
-            <h3>Senior Business Consultant</h3>
-            <p class="timeline-org">Department of National Defence (DND) – Director Defence Information Management Programme (DDIMP)</p>
-            <ul>
+            <span class="timeline-date" data-i18n="job6.date">September 2017 – October 2018</span>
+            <h3 data-i18n="job6.title">Senior Business Consultant</h3>
+            <p class="timeline-org" data-i18n="job6.org">Department of National Defence (DND) – Director Defence Information Management Programme (DDIMP)</p>
+            <ul data-i18n="job6.bullets">
               <li>Provided strategic advisory on government engagement, policy analysis, and regulatory compliance for large-scale IM/IT projects.</li>
               <li>Delivered clear, actionable policy recommendations to senior leadership.</li>
             </ul>
@@ -279,10 +281,10 @@
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-date">September 2015 – August 2017</span>
-            <h3>Senior Business Consultant</h3>
-            <p class="timeline-org">Employment and Social Development Canada (ESDC)</p>
-            <ul>
+            <span class="timeline-date" data-i18n="job7.date">September 2015 – August 2017</span>
+            <h3 data-i18n="job7.title">Senior Business Consultant</h3>
+            <p class="timeline-org" data-i18n="job7.org">Employment and Social Development Canada (ESDC)</p>
+            <ul data-i18n="job7.bullets">
               <li>Streamlined policy development for Employment Insurance (EI), aligning service delivery with regulatory frameworks.</li>
               <li>Conducted detailed policy analysis and provided strategic advisory on government relations.</li>
             </ul>
@@ -293,32 +295,23 @@
     </div>
   </section>
 
-  <!-- ===== EDUCATION ===== -->
-  <section id="education" class="section section-dark">
+  <!-- ===== LANGUAGES ===== -->
+  <section id="languages" class="section section-dark">
     <div class="container">
-      <div class="section-label">Background</div>
-      <h2 class="section-title">Education &amp; Languages</h2>
-      <div class="edu-grid">
-
-        <div class="edu-card">
-          <div class="edu-icon" aria-hidden="true">&#127979;</div>
-          <h3>Foundations of Enterprise Architecture</h3>
-          <p class="edu-inst">University of Toronto, ON</p>
-          <span class="edu-badge">Certificate</span>
+      <div class="section-label" data-i18n="lang.label">Languages</div>
+      <h2 class="section-title" data-i18n="lang.title">Bilingual Professional</h2>
+      <div class="languages-showcase">
+        <div class="lang-card">
+          <div class="lang-card-flag">🇨🇦</div>
+          <h3 data-i18n="lang.en.title">English</h3>
+          <p class="lang-card-level" data-i18n="lang.en.level">Native / Full Professional Proficiency</p>
+          <p class="lang-card-desc" data-i18n="lang.en.desc">Primary language for all Gartner research, client advisory, conference presentations, and executive communications.</p>
         </div>
-
-      </div>
-
-      <div class="languages-bar">
-        <div class="lang-item">
-          <span class="lang-label">English</span>
-          <div class="lang-track"><div class="lang-fill" style="width:100%"></div></div>
-          <span class="lang-level">Fluent</span>
-        </div>
-        <div class="lang-item">
-          <span class="lang-label">French</span>
-          <div class="lang-track"><div class="lang-fill" style="width:100%"></div></div>
-          <span class="lang-level">Fluent</span>
+        <div class="lang-card">
+          <div class="lang-card-flag">🇨🇦</div>
+          <h3 data-i18n="lang.fr.title">Français</h3>
+          <p class="lang-card-level" data-i18n="lang.fr.level">Compétence professionnelle complète</p>
+          <p class="lang-card-desc" data-i18n="lang.fr.desc">Langue utilisée dans le cadre de consultations clients, de présentations et de communications avec des organisations fédérales canadiennes.</p>
         </div>
       </div>
     </div>
@@ -327,9 +320,9 @@
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="section">
     <div class="container contact-container">
-      <div class="section-label">Contact</div>
-      <h2 class="section-title">Get in Touch</h2>
-      <p class="contact-intro">Open to professional connections, research inquiries, and speaking opportunities.</p>
+      <div class="section-label" data-i18n="contact.label">Contact</div>
+      <h2 class="section-title" data-i18n="contact.title">Get in Touch</h2>
+      <p class="contact-intro" data-i18n="contact.intro">Open to professional connections, research inquiries, and speaking opportunities.</p>
       <div class="contact-cards">
         <a href="mailto:nathandavie@gmail.com" class="contact-card">
           <span class="contact-icon" aria-hidden="true">&#9993;</span>
@@ -341,7 +334,7 @@
         </div>
         <a href="https://ca.linkedin.com/in/nathan-davie-22a0ab33" target="_blank" rel="noopener noreferrer" class="contact-card">
           <span class="contact-icon" aria-hidden="true">&#128101;</span>
-          <span class="contact-detail">LinkedIn Profile</span>
+          <span class="contact-detail" data-i18n="contact.linkedin">LinkedIn Profile</span>
         </a>
       </div>
     </div>
@@ -349,7 +342,7 @@
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&copy; 2026 Nathan Davie. All rights reserved.</p>
+    <p data-i18n="footer.text">&copy; 2026 Nathan Davie. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
