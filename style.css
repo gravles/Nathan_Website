@@ -269,12 +269,15 @@ ul { list-style: none; }
 
 /* ---------- Competencies ---------- */
 .competencies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
+  justify-content: center;
 }
 
 .comp-card {
+  flex: 1 1 270px;
+  max-width: calc(33.33% - 1rem);
   background: rgba(255,255,255,.05);
   border: 1px solid rgba(255,255,255,.1);
   border-radius: var(--radius);
@@ -490,6 +493,7 @@ ul { list-style: none; }
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.25rem;
   margin-bottom: 3rem;
+  max-width: 480px;
 }
 
 .edu-card {
@@ -660,6 +664,10 @@ footer {
 
   .timeline { padding-left: 1.5rem; }
   .timeline-item { padding-left: 1.25rem; }
+
+  .gartner-stats { grid-template-columns: repeat(3, 1fr); }
+
+  .comp-card { max-width: 100%; }
 
   .contact-cards { flex-direction: column; align-items: center; }
   .contact-card { width: 100%; max-width: 320px; }
