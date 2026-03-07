@@ -279,6 +279,92 @@ ul { list-style: none; }
   line-height: 1.6;
 }
 
+/* ---------- Gartner Spotlight ---------- */
+.gartner-spotlight {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 2rem 2.25rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 6px 32px rgba(201,168,76,.15);
+}
+
+.gartner-spotlight-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.gartner-badge {
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 800;
+  font-size: .85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: .45rem 1rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.gartner-spotlight-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: .15rem;
+}
+
+.gartner-spotlight-header p {
+  font-size: .875rem;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.gartner-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.gartner-stat {
+  text-align: center;
+}
+
+.gartner-stat-num {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: .4rem;
+}
+
+.gartner-stat-label {
+  font-size: .72rem;
+  color: rgba(255,255,255,.55);
+  line-height: 1.4;
+}
+
+.gartner-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.gartner-topics span {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  color: rgba(255,255,255,.75);
+  padding: .28rem .75rem;
+  border-radius: 100px;
+  font-size: .75rem;
+  font-weight: 500;
+}
+
 /* ---------- Timeline ---------- */
 .timeline {
   position: relative;
