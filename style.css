@@ -319,6 +319,15 @@ ul { list-style: none; }
   box-shadow: 0 0 0 2px var(--gold);
 }
 
+.timeline-marker.featured {
+  width: 18px;
+  height: 18px;
+  top: 4px;
+  left: calc(-2rem - 2px);
+  background: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold), 0 0 12px rgba(201,168,76,.45);
+}
+
 .timeline-date {
   font-size: .78rem;
   font-weight: 600;
