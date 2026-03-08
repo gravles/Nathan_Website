@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nathan Davie – CV</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', serif;
+      font-size: 10.5pt;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.5;
+    }
+
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 52px;
+    }
+
+    /* ── Header ── */
+    .header {
+      border-bottom: 3px solid #1a1a1a;
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-family: 'Georgia', serif;
+      font-size: 26pt;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: #0d0d0d;
+    }
+
+    .header .title-line {
+      font-size: 11.5pt;
+      color: #444;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      margin-top: 10px;
+      font-size: 9.5pt;
+      color: #333;
+    }
+
+    .contact-bar span::before {
+      content: '•';
+      margin-right: 6px;
+      color: #888;
+    }
+
+    .contact-bar span:first-child::before { content: ''; margin-right: 0; }
+
+    /* ── Section headings ── */
+    h2 {
+      font-family: 'Georgia', serif;
+      font-size: 11.5pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #0d0d0d;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+      margin-top: 22px;
+    }
+
+    /* ── Profile ── */
+    .profile p {
+      font-size: 10pt;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* ── Experience ── */
+    .job {
+      margin-bottom: 16px;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .job-title {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #0d0d0d;
+    }
+
+    .job-date {
+      font-size: 9.5pt;
+      color: #555;
+      white-space: nowrap;
+      margin-left: 10px;
+      flex-shrink: 0;
+    }
+
+    .job-org {
+      font-size: 10pt;
+      color: #444;
+      font-style: italic;
+      margin-top: 1px;
+      margin-bottom: 5px;
+    }
+
+    .job ul {
+      padding-left: 18px;
+    }
+
+    .job li {
+      font-size: 9.5pt;
+      color: #222;
+      margin-bottom: 3px;
+      line-height: 1.5;
+    }
+
+    /* ── Skills / Competencies ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 30px;
+    }
+
+    .skill-item {
+      font-size: 9.5pt;
+      color: #222;
+      padding: 2px 0;
+    }
+
+    .skill-item::before {
+      content: '▪';
+      margin-right: 6px;
+      color: #555;
+    }
+
+    /* ── Languages ── */
+    .lang-row {
+      display: flex;
+      gap: 30px;
+    }
+
+    .lang-item {
+      font-size: 10pt;
+      color: #222;
+    }
+
+    .lang-item strong {
+      display: block;
+    }
+
+    /* ── Key stats ── */
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 0;
+      margin-top: 6px;
+    }
+
+    .stat-chip {
+      font-size: 9pt;
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      padding: 2px 8px;
+      margin-right: 6px;
+      color: #333;
+    }
+
+    @media print {
+      body { background: white; }
+      .page { padding: 32px 40px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Nathan Davie</h1>
+    <div class="title-line">Director Analyst – IT Services &nbsp;|&nbsp; Sourcing, Procurement &amp; Vendor Management &nbsp;|&nbsp; Gartner</div>
+    <div class="contact-bar">
+      <span>Ottawa, Ontario, Canada</span>
+      <span>nathandavie@gmail.com</span>
+      <span>linkedin.com/in/nathan-davie-22a0ab33</span>
+      <span>Bilingual – English / French</span>
+    </div>
+  </div>
+
+  <!-- PROFILE -->
+  <h2>Profile</h2>
+  <div class="profile">
+    <p>
+      Director Analyst at Gartner focused on IT Services Sourcing, Procurement, and Vendor Management, with 20+ years of
+      hands-on experience spanning enterprise IT strategy, federal government consulting, and SaaS entrepreneurship.
+      Produces thought-leading research as Lead Author (8+ advisory notes per year) and advises 300+ enterprise clients
+      annually on sourcing decisions, RFP design, contract negotiation, and global service provider selection across
+      software engineering, cloud, AI/GenAI, ERP, and CRM markets. Gartner's client network spans 14,000+ enterprises
+      in 90+ countries.
+    </p>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <h2>Professional Experience</h2>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Director Analyst – IT Services</span>
+      <span class="job-date">September 2025 – Present</span>
+    </div>
+    <div class="job-org">Gartner – Sourcing, Procurement &amp; Vendor Management</div>
+    <div class="stats-row">
+      <span class="stat-chip">8+ Advisory Notes / Year (Lead Author)</span>
+      <span class="stat-chip">300+ Client Interactions / Year</span>
+      <span class="stat-chip">14k+ Client Enterprises in 90+ Countries</span>
+    </div>
+    <ul style="margin-top:6px;">
+      <li>Creates thought-leading research and guides clients in the Software Engineering and IT application services market with a focus on sourcing practices, contracting, and negotiations.</li>
+      <li>Advises clients on sourcing issues, RFPs, and provider proposals; delivers actionable guidance through inquiries, presentations, webinars, and written content.</li>
+      <li>Produces high-quality advisory notes as Lead Author (8+ per year), covering areas including AI/GenAI, cloud, agile, custom software, analytics, CX, API, and QA.</li>
+      <li>Reviews IT outsourcing and application solution RFPs; guides clients on global service providers for software development and enterprise implementations.</li>
+      <li>Conducts research on global service provider landscape including DevOps, LCAP, RPA, ERP (SAP, Oracle, MS Dynamics), Cloud, and CRM/HCM (Workday, Salesforce).</li>
+      <li>Advises 300+ clients per year and collaborates with sales to support client acquisition and retention across 14,000+ client enterprises in 90+ countries.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Senior Business Consultant</span>
+      <span class="job-date">November 2021 – September 2025</span>
+    </div>
+    <div class="job-org">Treasury Board Secretariat (TBS) – Office of the Chief HR Officer (OCHRO)</div>
+    <ul>
+      <li>Advised senior executives on government relations strategies, public policy development, and regulatory compliance.</li>
+      <li>Conducted policy analysis on HR systems and federal initiatives, ensuring alignment with government priorities.</li>
+      <li>Developed stakeholder engagement strategies, fostering collaboration with federal departments and external partners.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Senior Business Consultant</span>
+      <span class="job-date">May 2021 – January 2022</span>
+    </div>
+    <div class="job-org">Public Services and Procurement Canada (PSPC) – Digital Services Branch (DSB)</div>
+    <ul>
+      <li>Delivered strategic advisory on government engagement, public policy alignment, and communications strategies for digital services.</li>
+      <li>Conducted detailed policy analysis on technology initiatives, advising on regulatory compliance and strategic communications.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Senior Business Transformation Consultant</span>
+      <span class="job-date">December 2019 – May 2021</span>
+    </div>
+    <div class="job-org">Public Services and Procurement Canada (PSPC) – Digital Services Branch (DSB)</div>
+    <ul>
+      <li>Led the design and implementation of government relations strategies to support technology adoption and service delivery.</li>
+      <li>Conducted scenario planning to navigate complex policy issues, delivering clear strategic guidance.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Senior Business Consultant</span>
+      <span class="job-date">September 2017 – October 2018</span>
+    </div>
+    <div class="job-org">Department of National Defence (DND) – Director Defence Information Management Programme (DDIMP)</div>
+    <ul>
+      <li>Provided strategic advisory on government engagement, policy analysis, and regulatory compliance for large-scale IM/IT projects.</li>
+      <li>Delivered clear, actionable policy recommendations to senior leadership.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Senior Business Consultant</span>
+      <span class="job-date">September 2015 – August 2017</span>
+    </div>
+    <div class="job-org">Employment and Social Development Canada (ESDC)</div>
+    <ul>
+      <li>Streamlined policy development for Employment Insurance (EI), aligning service delivery with regulatory frameworks.</li>
+      <li>Conducted detailed policy analysis and provided strategic advisory on government relations.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Founder</span>
+      <span class="job-date">June 2012 – March 2023</span>
+    </div>
+    <div class="job-org">Easy Manifest Inc. – Ottawa, ON</div>
+    <ul>
+      <li>Developed a SaaS platform for commercial freight carriers ensuring compliance with government regulations.</li>
+      <li>Advised clients on regulatory compliance, policy navigation, and stakeholder engagement.</li>
+    </ul>
+  </div>
+
+  <!-- CORE COMPETENCIES -->
+  <h2>Core Competencies</h2>
+  <div class="skills-grid">
+    <div class="skill-item">IT Sourcing &amp; Procurement Strategy</div>
+    <div class="skill-item">RFP Design, Review &amp; SOW Analysis</div>
+    <div class="skill-item">Vendor Management &amp; Negotiation</div>
+    <div class="skill-item">SLA / KPI Frameworks</div>
+    <div class="skill-item">Global Service Provider Evaluation</div>
+    <div class="skill-item">Nearshore / Offshore Delivery Models</div>
+    <div class="skill-item">AI, GenAI &amp; Cloud Advisory</div>
+    <div class="skill-item">DevOps, LCAP &amp; RPA</div>
+    <div class="skill-item">ERP – SAP, Oracle, MS Dynamics</div>
+    <div class="skill-item">CRM / HCM – Workday, Salesforce</div>
+    <div class="skill-item">Enterprise Architecture</div>
+    <div class="skill-item">Thought Leadership &amp; Research Writing</div>
+    <div class="skill-item">Executive Advisory &amp; Client Engagement</div>
+    <div class="skill-item">Webinars &amp; Conference Presentations</div>
+    <div class="skill-item">Federal Government IT Policy</div>
+    <div class="skill-item">Agile / Scrum Methodologies</div>
+  </div>
+
+  <!-- LANGUAGES -->
+  <h2>Languages</h2>
+  <div class="lang-row">
+    <div class="lang-item">
+      <strong>English</strong>
+      Native / Full Professional Proficiency
+    </div>
+    <div class="lang-item">
+      <strong>French (Français)</strong>
+      Full Professional Proficiency
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
