@@ -3,6 +3,7 @@ const translations = {
   en: {
     'nav.about': 'About',
     'nav.competencies': 'Competencies',
+    'nav.topics': 'Topics',
     'nav.experience': 'Experience',
     'nav.contact': 'Contact',
 
@@ -10,6 +11,13 @@ const translations = {
     'hero.subtitle': 'Sourcing, Procurement &amp; Vendor Management',
     'hero.tags': '<span>IT Sourcing &amp; Contracting</span><span>Global Service Providers</span><span>AI / GenAI / Cloud</span><span>Bilingual EN/FR</span><span>20+ Years Experience</span><span>Ottawa, Ontario</span>',
     'hero.cta': 'Get in Touch',
+    'hero.cv': 'Download CV',
+
+    'topics.label': 'Research Areas',
+    'topics.title': 'Topics I Cover',
+    'topics.cloud': '<span class="topic-tag topic-lg">IT Sourcing &amp; Procurement</span><span class="topic-tag topic-lg">Global Service Providers</span><span class="topic-tag topic-lg">RFP &amp; SOW Review</span><span class="topic-tag topic-md">Artificial Intelligence (AI)</span><span class="topic-tag topic-md">GenAI</span><span class="topic-tag topic-lg">Vendor Management</span><span class="topic-tag topic-md">Cloud Computing</span><span class="topic-tag topic-sm">DevOps</span><span class="topic-tag topic-md">ERP – SAP</span><span class="topic-tag topic-md">ERP – Oracle</span><span class="topic-tag topic-sm">MS Dynamics</span><span class="topic-tag topic-md">CRM / HCM</span><span class="topic-tag topic-sm">Workday</span><span class="topic-tag topic-sm">Salesforce</span><span class="topic-tag topic-md">Outsourcing Strategy</span><span class="topic-tag topic-sm">Nearshore / Offshore Delivery</span><span class="topic-tag topic-md">Contract Negotiation</span><span class="topic-tag topic-sm">SLA / KPI Frameworks</span><span class="topic-tag topic-sm">LCAP / RPA</span><span class="topic-tag topic-md">Custom Software Engineering</span><span class="topic-tag topic-sm">QA &amp; Testing</span><span class="topic-tag topic-sm">API Integration</span><span class="topic-tag topic-sm">Agile / Scrum</span><span class="topic-tag topic-md">Enterprise Architecture</span><span class="topic-tag topic-sm">Analytics &amp; Data</span><span class="topic-tag topic-sm">CX &amp; UX Services</span><span class="topic-tag topic-sm">Federal Government IT</span>',
+
+    'contact.cv': 'Download CV',
 
     'about.label': 'Profile',
     'about.title': 'Analyst. Advisor.<br/>Thought Leader.',
@@ -96,6 +104,7 @@ const translations = {
   fr: {
     'nav.about': 'À propos',
     'nav.competencies': 'Compétences',
+    'nav.topics': 'Thèmes',
     'nav.experience': 'Expérience',
     'nav.contact': 'Contact',
 
@@ -103,6 +112,13 @@ const translations = {
     'hero.subtitle': 'Approvisionnement, achats et gestion des fournisseurs',
     'hero.tags': '<span>Approvisionnement et contrats TI</span><span>Fournisseurs de services mondiaux</span><span>IA / GenAI / Infonuagique</span><span>Bilingue AN/FR</span><span>20+ ans d\'expérience</span><span>Ottawa, Ontario</span>',
     'hero.cta': 'Me contacter',
+    'hero.cv': 'Télécharger CV',
+
+    'topics.label': 'Domaines de recherche',
+    'topics.title': 'Thèmes couverts',
+    'topics.cloud': '<span class="topic-tag topic-lg">Approvisionnement TI</span><span class="topic-tag topic-lg">Fournisseurs de services mondiaux</span><span class="topic-tag topic-lg">Appels d\'offres et énoncés de travaux</span><span class="topic-tag topic-md">Intelligence artificielle (IA)</span><span class="topic-tag topic-md">GenAI</span><span class="topic-tag topic-lg">Gestion des fournisseurs</span><span class="topic-tag topic-md">Infonuagique</span><span class="topic-tag topic-sm">DevOps</span><span class="topic-tag topic-md">ERP – SAP</span><span class="topic-tag topic-md">ERP – Oracle</span><span class="topic-tag topic-sm">MS Dynamics</span><span class="topic-tag topic-md">CRM / HCM</span><span class="topic-tag topic-sm">Workday</span><span class="topic-tag topic-sm">Salesforce</span><span class="topic-tag topic-md">Stratégie d\'impartition</span><span class="topic-tag topic-sm">Livraison proche-rive / délocalisée</span><span class="topic-tag topic-md">Négociation de contrats</span><span class="topic-tag topic-sm">Cadres SLA / KPI</span><span class="topic-tag topic-sm">LCAP / RPA</span><span class="topic-tag topic-md">Génie logiciel personnalisé</span><span class="topic-tag topic-sm">Assurance qualité et tests</span><span class="topic-tag topic-sm">Intégration API</span><span class="topic-tag topic-sm">Agile / Scrum</span><span class="topic-tag topic-md">Architecture d\'entreprise</span><span class="topic-tag topic-sm">Analytique et données</span><span class="topic-tag topic-sm">Services CX et UX</span><span class="topic-tag topic-sm">TI du gouvernement fédéral</span>',
+
+    'contact.cv': 'Télécharger CV',
 
     'about.label': 'Profil',
     'about.title': 'Analyste. Conseiller.<br/>Leader d\'opinion.',
@@ -248,6 +264,49 @@ const observer = new IntersectionObserver(
 );
 
 fadeEls.forEach(el => observer.observe(el));
+
+// ===== Gartner stat counter animation =====
+function animateCounter(el) {
+  const raw = el.textContent.trim();           // e.g. "14k+", "300+", "8+"
+  const suffix = raw.replace(/[\d.]/g, '');    // "+", "k+", etc.
+  const hasK   = suffix.includes('k');
+  const num    = parseFloat(raw);              // 14, 300, 8 …
+  const duration = 1600;
+  const start  = performance.now();
+
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(ease * num);
+    el.textContent = (hasK ? current + 'k' : current) + (raw.includes('+') ? '+' : '');
+    if (progress < 1) requestAnimationFrame(tick);
+    else el.textContent = raw; // restore exact original
+  }
+  requestAnimationFrame(tick);
+}
+
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.gartner-stat-num').forEach(animateCounter);
+      statObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.4 });
+
+const statsEl = document.querySelector('.gartner-stats');
+if (statsEl) statObserver.observe(statsEl);
+
+// ===== Back-to-top button =====
+const backToTop = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+  backToTop.classList.toggle('visible', window.scrollY > 400);
+});
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 // ===== Active nav link highlight =====
 const sections = document.querySelectorAll('section[id], header[id]');

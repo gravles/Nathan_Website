@@ -36,6 +36,7 @@
       <ul class="nav-links">
         <li><a href="#about" data-i18n="nav.about">About</a></li>
         <li><a href="#competencies" data-i18n="nav.competencies">Competencies</a></li>
+        <li><a href="#topics" data-i18n="nav.topics">Topics</a></li>
         <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
@@ -64,7 +65,10 @@
           <span>20+ Years Experience</span>
           <span>Ottawa, Ontario</span>
         </p>
-        <a href="#contact" class="btn-primary" data-i18n="hero.cta">Get in Touch</a>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary" data-i18n="hero.cta">Get in Touch</a>
+          <a href="cv.pdf" download class="btn-secondary" data-i18n="hero.cv">Download CV</a>
+        </div>
       </div>
     </div>
     <div class="hero-scroll-hint">&#8595;</div>
@@ -138,6 +142,43 @@
           <p data-i18n="comp.card5.desc">Lead Author (8+ notes/year), 300+ Client Interactions/year, Webinars, Conference Presentations, Strategic Writing</p>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOPICS I COVER ===== -->
+  <section id="topics" class="section">
+    <div class="container">
+      <div class="section-label" data-i18n="topics.label">Research Areas</div>
+      <h2 class="section-title" data-i18n="topics.title">Topics I Cover</h2>
+      <div class="topics-cloud" id="topics-cloud" data-i18n="topics.cloud">
+        <span class="topic-tag topic-lg">IT Sourcing &amp; Procurement</span>
+        <span class="topic-tag topic-lg">Global Service Providers</span>
+        <span class="topic-tag topic-lg">RFP &amp; SOW Review</span>
+        <span class="topic-tag topic-md">Artificial Intelligence (AI)</span>
+        <span class="topic-tag topic-md">GenAI</span>
+        <span class="topic-tag topic-lg">Vendor Management</span>
+        <span class="topic-tag topic-md">Cloud Computing</span>
+        <span class="topic-tag topic-sm">DevOps</span>
+        <span class="topic-tag topic-md">ERP – SAP</span>
+        <span class="topic-tag topic-md">ERP – Oracle</span>
+        <span class="topic-tag topic-sm">MS Dynamics</span>
+        <span class="topic-tag topic-md">CRM / HCM</span>
+        <span class="topic-tag topic-sm">Workday</span>
+        <span class="topic-tag topic-sm">Salesforce</span>
+        <span class="topic-tag topic-md">Outsourcing Strategy</span>
+        <span class="topic-tag topic-sm">Nearshore / Offshore Delivery</span>
+        <span class="topic-tag topic-md">Contract Negotiation</span>
+        <span class="topic-tag topic-sm">SLA / KPI Frameworks</span>
+        <span class="topic-tag topic-sm">LCAP / RPA</span>
+        <span class="topic-tag topic-md">Custom Software Engineering</span>
+        <span class="topic-tag topic-sm">QA &amp; Testing</span>
+        <span class="topic-tag topic-sm">API Integration</span>
+        <span class="topic-tag topic-sm">Agile / Scrum</span>
+        <span class="topic-tag topic-md">Enterprise Architecture</span>
+        <span class="topic-tag topic-sm">Analytics &amp; Data</span>
+        <span class="topic-tag topic-sm">CX &amp; UX Services</span>
+        <span class="topic-tag topic-sm">Federal Government IT</span>
       </div>
     </div>
   </section>
@@ -336,6 +377,10 @@
           <span class="contact-icon" aria-hidden="true">&#128101;</span>
           <span class="contact-detail" data-i18n="contact.linkedin">LinkedIn Profile</span>
         </a>
+        <a href="cv.pdf" download class="contact-card">
+          <span class="contact-icon" aria-hidden="true">&#128196;</span>
+          <span class="contact-detail" data-i18n="contact.cv">Download CV</span>
+        </a>
       </div>
     </div>
   </section>
@@ -344,6 +389,9 @@
   <footer>
     <p data-i18n="footer.text">&copy; 2026 Nathan Davie. All rights reserved.</p>
   </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">&#8679;</button>
 
   <script src="script.js"></script>
   <script type="application/ld+json">
