@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete My Data – FitnessTracker</title>
+  <meta name="description" content="Request deletion of your FitnessTracker account and all associated data." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.nathandavie.com/delete-data" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    .delete-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #0f2a45 100%);
+      padding: 7rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .delete-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 60%, rgba(29,95,168,.2) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .delete-hero .section-label { color: var(--gold); }
+    .delete-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #fff;
+      margin-bottom: .75rem;
+    }
+    .delete-hero p {
+      color: rgba(255,255,255,.6);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .delete-content {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 4rem 2rem 5rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .875rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 2.5rem;
+      transition: opacity .2s;
+    }
+    .back-link:hover { opacity: .75; }
+
+    .info-card {
+      background: #f0f4ff;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .info-card p {
+      font-size: .925rem;
+      color: var(--navy);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .steps {
+      margin-bottom: 2.5rem;
+    }
+    .steps h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+    }
+    .step {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.1rem;
+      align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .step-text {
+      font-size: .95rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .step-text strong { color: var(--navy); }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: .95rem 2.25rem;
+      border-radius: 100px;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      margin-bottom: 1rem;
+    }
+    .cta-btn:hover {
+      background: var(--blue-lt);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(29,95,168,.3);
+    }
+
+    .manual-email {
+      font-size: .875rem;
+      color: var(--text-lt);
+      margin-top: .5rem;
+    }
+    .manual-email a {
+      color: var(--blue);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    .what-gets-deleted h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+    .what-gets-deleted ul {
+      list-style: none;
+      padding: 0;
+    }
+    .what-gets-deleted ul li {
+      font-size: .925rem;
+      color: var(--text);
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: .55rem;
+      line-height: 1.6;
+    }
+    .what-gets-deleted ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #22c55e;
+      font-weight: 700;
+    }
+
+    .timeline-note {
+      margin-top: 1.5rem;
+      font-size: .875rem;
+      color: var(--text-lt);
+      line-height: 1.6;
+    }
+    .timeline-note strong { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Nathan Davie</a>
+      <ul class="nav-links">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <div class="delete-hero">
+    <div class="section-label">FitnessTracker</div>
+    <h1>Delete My Account &amp; Data</h1>
+    <p>Submit a request to permanently delete your account and all associated data from FitnessTracker.</p>
+  </div>
+
+  <!-- ===== CONTENT ===== -->
+  <main class="delete-content">
+
+    <a href="/privacy" class="back-link">&#8592; Privacy Policy</a>
+
+    <div class="info-card">
+      <p>
+        <strong>Your data belongs to you.</strong> Once your request is received, your account and
+        all associated data will be permanently deleted within <strong>30 days</strong>. This action
+        cannot be undone.
+      </p>
+    </div>
+
+    <div class="steps">
+      <h2>How to submit your request</h2>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Click the button below to open a pre-filled email request. Your email client will open with the subject and body already filled in.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Verify the email address</strong> matches the one you used to sign up for FitnessTracker, then send.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">You will receive a <strong>confirmation reply within 2 business days</strong>. Deletion will be completed within 30 days of confirmation.</div>
+      </div>
+    </div>
+
+    <a class="cta-btn"
+       href="mailto:nathandavie@gmail.com?subject=FitnessTracker%20%E2%80%93%20Account%20%26%20Data%20Deletion%20Request&body=Hi%2C%0A%0AI%20would%20like%20to%20request%20the%20permanent%20deletion%20of%20my%20FitnessTracker%20account%20and%20all%20associated%20data.%0A%0AAccount%20email%3A%20%5BYour%20account%20email%20here%5D%0A%0AI%20understand%20this%20action%20is%20permanent%20and%20cannot%20be%20undone.%0A%0AThank%20you.">
+      &#9993;&nbsp; Send Deletion Request
+    </a>
+
+    <p class="manual-email">
+      Prefer to write your own email?
+      Send to <a href="mailto:nathandavie@gmail.com">nathandavie@gmail.com</a> with subject
+      <em>"FitnessTracker – Account &amp; Data Deletion Request"</em>
+      and include the email address on your account.
+    </p>
+
+    <hr class="divider" />
+
+    <div class="what-gets-deleted">
+      <h2>What gets deleted</h2>
+      <ul>
+        <li>Your account and login credentials</li>
+        <li>All daily logs (weight, sleep, mood, energy, steps)</li>
+        <li>All workout history, programs, and personal records</li>
+        <li>All nutrition data, meal plans, and pantry items</li>
+        <li>All progress photos</li>
+        <li>All body measurements and metrics history</li>
+        <li>Push notification tokens and reminder settings</li>
+        <li>All AI coach conversation history</li>
+        <li>Any connected Strava integration data</li>
+      </ul>
+      <p class="timeline-note">
+        <strong>Retention note:</strong> Anonymised aggregate statistics (e.g. total number of app users)
+        that cannot be linked back to you are not subject to deletion. No other data is retained after
+        your request is processed.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 Nathan Davie. All rights reserved.
+      &nbsp;·&nbsp; <a href="/privacy" style="color:rgba(255,255,255,.5);">Privacy Policy</a>
+      &nbsp;·&nbsp; <a href="/delete-data" style="color:rgba(255,255,255,.5);">Delete My Data</a>
+    </p>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">&#8679;</button>
+
+  <script>
+    const backToTop = document.getElementById('back-to-top');
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    navToggle?.addEventListener('click', () => navLinks?.classList.toggle('open'));
+  </script>
+</body>
+</html>
