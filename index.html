@@ -20,42 +20,56 @@
   <meta name="twitter:image" content="https://www.nathandavie.com/headshot.jpg" />
   <meta name="twitter:image:alt" content="Nathan Davie – Director Analyst, IT Services at Gartner" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#060a13" />
   <link rel="canonical" href="https://www.nathandavie.com" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="apple-touch-icon" href="headshot.jpg" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ===== NAVIGATION ===== -->
   <nav id="navbar">
     <div class="nav-inner">
-      <span class="nav-logo">Nathan Davie</span>
-      <ul class="nav-links">
+      <a href="#hero" class="nav-logo" aria-label="Back to top"><span class="nav-logo-mark">N</span>athan Davie</a>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about" data-i18n="nav.about">About</a></li>
         <li><a href="#competencies" data-i18n="nav.competencies">Competencies</a></li>
         <li><a href="#topics" data-i18n="nav.topics">Topics</a></li>
+        <li><a href="#research" data-i18n="nav.research">Research</a></li>
         <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="nav-right">
         <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">FR</button>
-        <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
 
   <!-- ===== HERO ===== -->
   <header id="hero">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-glow" aria-hidden="true"></div>
     <div class="hero-inner">
       <div class="hero-photo-wrap">
-        <img src="headshot.jpg" alt="Nathan Davie" class="hero-photo" />
+        <div class="hero-photo-ring" aria-hidden="true"></div>
+        <picture>
+          <source srcset="headshot-web.webp" type="image/webp" />
+          <img src="headshot-web.jpg" alt="Nathan Davie" class="hero-photo" width="400" height="600" fetchpriority="high" />
+        </picture>
       </div>
       <div class="hero-content">
         <p class="hero-eyebrow" data-i18n="hero.eyebrow">Director Analyst – IT Services &nbsp;·&nbsp; Gartner</p>
-        <h1>Nathan Davie</h1>
+        <h1 class="hero-name"><span class="hero-name-line">Nathan</span> <span class="hero-name-line">Davie</span></h1>
         <p class="hero-subtitle" data-i18n="hero.subtitle">Sourcing, Procurement &amp; Vendor Management</p>
         <p class="hero-tags" data-i18n="hero.tags">
           <span>IT Sourcing &amp; Contracting</span>
@@ -71,7 +85,9 @@
         </div>
       </div>
     </div>
-    <div class="hero-scroll-hint">&#8595;</div>
+    <a href="#about" class="hero-scroll-hint" aria-label="Scroll down">
+      <span class="hero-scroll-mouse"><span class="hero-scroll-dot"></span></span>
+    </a>
   </header>
 
   <!-- ===== ABOUT ===== -->
@@ -106,38 +122,48 @@
   </section>
 
   <!-- ===== COMPETENCIES ===== -->
-  <section id="competencies" class="section section-dark">
+  <section id="competencies" class="section section-alt">
     <div class="container">
       <div class="section-label" data-i18n="comp.label">Expertise</div>
       <h2 class="section-title" data-i18n="comp.title">Core Competencies</h2>
       <div class="competencies-grid">
 
         <div class="comp-card">
-          <div class="comp-icon" aria-hidden="true">&#128270;</div>
+          <div class="comp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
           <h3 data-i18n="comp.card1.title">IT Sourcing &amp; Procurement</h3>
           <p data-i18n="comp.card1.desc">RFP Design &amp; Review, SOW Analysis, SLA/KPI Frameworks, Vendor Negotiations, Outsourcing Strategy</p>
         </div>
 
         <div class="comp-card">
-          <div class="comp-icon" aria-hidden="true">&#127760;</div>
+          <div class="comp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14.5 14.5 0 0 1 0 18 14.5 14.5 0 0 1 0-18"/></svg>
+          </div>
           <h3 data-i18n="comp.card2.title">Global Service Providers</h3>
           <p data-i18n="comp.card2.desc">Incumbent &amp; Disruptor Landscape, Nearshore/Offshore Delivery, Provider Evaluation &amp; Selection</p>
         </div>
 
         <div class="comp-card">
-          <div class="comp-icon" aria-hidden="true">&#129504;</div>
+          <div class="comp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+          </div>
           <h3 data-i18n="comp.card3.title">Emerging Technology</h3>
           <p data-i18n="comp.card3.desc">AI, GenAI, Cloud, DevOps, LCAP/RPA, API Integration, Custom Software, QA &amp; Testing</p>
         </div>
 
         <div class="comp-card">
-          <div class="comp-icon" aria-hidden="true">&#128196;</div>
+          <div class="comp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+          </div>
           <h3 data-i18n="comp.card4.title">Enterprise Applications</h3>
           <p data-i18n="comp.card4.desc">ERP (SAP, Oracle, MS Dynamics), CRM/HCM (Workday, Salesforce), Enterprise Architecture</p>
         </div>
 
         <div class="comp-card">
-          <div class="comp-icon" aria-hidden="true">&#128214;</div>
+          <div class="comp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
+          </div>
           <h3 data-i18n="comp.card5.title">Thought Leadership &amp; Research</h3>
           <p data-i18n="comp.card5.desc">Lead Author (8+ notes/year), 300+ Client Interactions/year, Webinars, Conference Presentations, Strategic Writing</p>
         </div>
@@ -180,6 +206,88 @@
         <span class="topic-tag topic-sm">CX &amp; UX Services</span>
         <span class="topic-tag topic-sm">Federal Government IT</span>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEARCH & SPEAKING ===== -->
+  <section id="research" class="section section-alt">
+    <div class="container">
+      <div class="section-label" data-i18n="research.label">Research &amp; Speaking</div>
+      <h2 class="section-title" data-i18n="research.title">Selected Research &amp; Talks</h2>
+      <p class="research-intro" data-i18n="research.intro">
+        Recent Gartner research authored as Lead Author, and conference presentations delivered to
+        public- and private-sector technology leaders.
+      </p>
+
+      <div class="research-grid">
+
+        <article class="research-card">
+          <div class="research-card-meta">
+            <span class="research-type" data-i18n="research.pubType">Gartner Research Note</span>
+            <span class="research-date" data-i18n="research.pub1.date">May 2026</span>
+          </div>
+          <h3>How to Enforce AI Vendor Performance and Prevent Silent Failures</h3>
+          <p data-i18n="research.pub1.desc">A performance control framework for AI "silent failures" — vendor models that meet uptime SLAs while quietly degrading in accuracy, fairness, or reliability — enforced through telemetry and financial accountability.</p>
+          <div class="research-tags" data-i18n="research.pub1.tags">
+            <span>AI Vendor Management</span><span>SLAs &amp; Telemetry</span><span>Shadow AI</span>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div class="research-card-meta">
+            <span class="research-type" data-i18n="research.pubType">Gartner Research Note</span>
+            <span class="research-date" data-i18n="research.pub2.date">May 2026</span>
+          </div>
+          <h3>Challenge Vendor AI Efficiencies to Stop Value Leakage</h3>
+          <p data-i18n="research.pub2.desc">Why buyers keep paying static, point-in-time pricing while vendors internalize AI productivity gains — and how to shift the burden of proof to vendors: prove it, price it, or rebalance it.</p>
+          <div class="research-tags" data-i18n="research.pub2.tags">
+            <span>AI Contracting</span><span>Pricing &amp; Negotiation</span><span>Value Capture</span>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div class="research-card-meta">
+            <span class="research-type" data-i18n="research.pubType">Gartner Research Note</span>
+            <span class="research-date" data-i18n="research.pub3.date">March 2026</span>
+          </div>
+          <h3>A Flexible Sourcing Framework to Strengthen IT Resilience and Sovereignty</h3>
+          <p data-i18n="research.pub3.desc">A modular "Spine and Ribs" sourcing architecture that balances the scale of global megavendors with sovereign, substitutable local components — executed through dynamic sourcing.</p>
+          <div class="research-tags" data-i18n="research.pub3.tags">
+            <span>Sourcing Strategy</span><span>Digital Sovereignty</span><span>IT Resilience</span>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div class="research-card-meta">
+            <span class="research-type" data-i18n="research.pubType">Gartner Research Note</span>
+            <span class="research-date" data-i18n="research.pub4.date">January 2026</span>
+          </div>
+          <h3>IT SPVM's Tactical Mandate: Leveraging Low-Code for Antifragile Acceleration</h3>
+          <p data-i18n="research.pub4.desc">Embedding low-code application platforms into sourcing, planning, and vendor evaluation so IT operations move beyond resilience — gaining value from volatility and change.</p>
+          <div class="research-tags" data-i18n="research.pub4.tags">
+            <span>Low-Code (LCAP)</span><span>Vendor Evaluation</span><span>Antifragility</span>
+          </div>
+        </article>
+
+      </div>
+
+      <article class="speaking-card">
+        <div class="speaking-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><path d="M12 18v4"/><path d="M8 22h8"/></svg>
+        </div>
+        <div class="speaking-body">
+          <div class="research-card-meta">
+            <span class="research-type speaking-type" data-i18n="research.speaking.type">Conference Presentation · 2026</span>
+          </div>
+          <h3>Sovereign AI in Government: Challenges, Opportunities and the Road Ahead for Canada</h3>
+          <p data-i18n="research.speaking.desc">An executive briefing for public-sector leaders on sovereign AI — the "kill switch" reality, why sovereignty is a spectrum rather than a checkbox, and a pragmatic road map for AI adoption in the Canadian government.</p>
+          <div class="research-tags" data-i18n="research.speaking.tags">
+            <span>Sovereign AI</span><span>Government &amp; Public Sector</span><span>Geopolitical Risk</span><span>Canada</span>
+          </div>
+        </div>
+      </article>
+
+      <p class="research-note" data-i18n="research.note">Full research notes are available to Gartner clients via gartner.com.</p>
     </div>
   </section>
 
@@ -337,7 +445,7 @@
   </section>
 
   <!-- ===== LANGUAGES ===== -->
-  <section id="languages" class="section section-dark">
+  <section id="languages" class="section section-alt">
     <div class="container">
       <div class="section-label" data-i18n="lang.label">Languages</div>
       <h2 class="section-title" data-i18n="lang.title">Bilingual Professional</h2>
@@ -366,19 +474,27 @@
       <p class="contact-intro" data-i18n="contact.intro">Open to professional connections, research inquiries, and speaking opportunities.</p>
       <div class="contact-cards">
         <a href="mailto:nathandavie@gmail.com" class="contact-card">
-          <span class="contact-icon" aria-hidden="true">&#9993;</span>
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 7L22 7"/></svg>
+          </span>
           <span class="contact-detail">nathandavie@gmail.com</span>
         </a>
         <div class="contact-card no-link">
-          <span class="contact-icon" aria-hidden="true">&#128205;</span>
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
           <span class="contact-detail">Ottawa, Ontario</span>
         </div>
         <a href="https://ca.linkedin.com/in/nathan-davie-22a0ab33" target="_blank" rel="noopener noreferrer" class="contact-card">
-          <span class="contact-icon" aria-hidden="true">&#128101;</span>
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v2"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </span>
           <span class="contact-detail" data-i18n="contact.linkedin">LinkedIn Profile</span>
         </a>
         <a href="cv.pdf" download class="contact-card">
-          <span class="contact-icon" aria-hidden="true">&#128196;</span>
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+          </span>
           <span class="contact-detail" data-i18n="contact.cv">Download CV</span>
         </a>
       </div>
@@ -391,9 +507,15 @@
   </footer>
 
   <!-- Back to top -->
-  <button class="back-to-top" id="back-to-top" aria-label="Back to top">&#8679;</button>
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
 
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

@@ -4,6 +4,7 @@ const translations = {
     'nav.about': 'About',
     'nav.competencies': 'Competencies',
     'nav.topics': 'Topics',
+    'nav.research': 'Research',
     'nav.experience': 'Experience',
     'nav.contact': 'Contact',
 
@@ -37,6 +38,27 @@ const translations = {
     'comp.card4.desc': 'ERP (SAP, Oracle, MS Dynamics), CRM/HCM (Workday, Salesforce), Enterprise Architecture',
     'comp.card5.title': 'Thought Leadership &amp; Research',
     'comp.card5.desc': 'Lead Author (8+ notes/year), 300+ Client Interactions/year, Webinars, Conference Presentations, Strategic Writing',
+
+    'research.label': 'Research &amp; Speaking',
+    'research.title': 'Selected Research &amp; Talks',
+    'research.intro': 'Recent Gartner research authored as Lead Author, and conference presentations delivered to public- and private-sector technology leaders.',
+    'research.pubType': 'Gartner Research Note',
+    'research.pub1.date': 'May 2026',
+    'research.pub1.desc': 'A performance control framework for AI "silent failures" — vendor models that meet uptime SLAs while quietly degrading in accuracy, fairness, or reliability — enforced through telemetry and financial accountability.',
+    'research.pub1.tags': '<span>AI Vendor Management</span><span>SLAs &amp; Telemetry</span><span>Shadow AI</span>',
+    'research.pub2.date': 'May 2026',
+    'research.pub2.desc': 'Why buyers keep paying static, point-in-time pricing while vendors internalize AI productivity gains — and how to shift the burden of proof to vendors: prove it, price it, or rebalance it.',
+    'research.pub2.tags': '<span>AI Contracting</span><span>Pricing &amp; Negotiation</span><span>Value Capture</span>',
+    'research.pub3.date': 'March 2026',
+    'research.pub3.desc': 'A modular "Spine and Ribs" sourcing architecture that balances the scale of global megavendors with sovereign, substitutable local components — executed through dynamic sourcing.',
+    'research.pub3.tags': '<span>Sourcing Strategy</span><span>Digital Sovereignty</span><span>IT Resilience</span>',
+    'research.pub4.date': 'January 2026',
+    'research.pub4.desc': 'Embedding low-code application platforms into sourcing, planning, and vendor evaluation so IT operations move beyond resilience — gaining value from volatility and change.',
+    'research.pub4.tags': '<span>Low-Code (LCAP)</span><span>Vendor Evaluation</span><span>Antifragility</span>',
+    'research.speaking.type': 'Conference Presentation · 2026',
+    'research.speaking.desc': 'An executive briefing for public-sector leaders on sovereign AI — the "kill switch" reality, why sovereignty is a spectrum rather than a checkbox, and a pragmatic road map for AI adoption in the Canadian government.',
+    'research.speaking.tags': '<span>Sovereign AI</span><span>Government &amp; Public Sector</span><span>Geopolitical Risk</span><span>Canada</span>',
+    'research.note': 'Full research notes are available to Gartner clients via gartner.com.',
 
     'exp.label': 'Career',
     'exp.title': 'Professional Experience',
@@ -105,6 +127,7 @@ const translations = {
     'nav.about': 'À propos',
     'nav.competencies': 'Compétences',
     'nav.topics': 'Thèmes',
+    'nav.research': 'Recherche',
     'nav.experience': 'Expérience',
     'nav.contact': 'Contact',
 
@@ -138,6 +161,27 @@ const translations = {
     'comp.card4.desc': 'ERP (SAP, Oracle, MS Dynamics), CRM/HCM (Workday, Salesforce), architecture d\'entreprise',
     'comp.card5.title': 'Leadership éclairé et recherche',
     'comp.card5.desc': 'Auteur principal (8+ notes/an), 300+ interactions clients/an, webinaires, présentations en conférence, rédaction stratégique',
+
+    'research.label': 'Recherche et conférences',
+    'research.title': 'Recherches et présentations choisies',
+    'research.intro': 'Recherches Gartner récentes rédigées à titre d\'auteur principal, et présentations livrées à des dirigeants technologiques des secteurs public et privé.',
+    'research.pubType': 'Note de recherche Gartner',
+    'research.pub1.date': 'Mai 2026',
+    'research.pub1.desc': 'Un cadre de contrôle de la performance pour les « défaillances silencieuses » de l\'IA — des modèles qui respectent les SLA de disponibilité tout en se dégradant en précision, en équité ou en fiabilité — appliqué par la télémétrie et l\'imputabilité financière.',
+    'research.pub1.tags': '<span>Gestion des fournisseurs d\'IA</span><span>SLA et télémétrie</span><span>IA fantôme</span>',
+    'research.pub2.date': 'Mai 2026',
+    'research.pub2.desc': 'Pourquoi les acheteurs continuent de payer des prix statiques alors que les fournisseurs internalisent les gains de productivité de l\'IA — et comment renverser le fardeau de la preuve : prouver, ajuster le prix ou rééquilibrer.',
+    'research.pub2.tags': '<span>Contrats d\'IA</span><span>Prix et négociation</span><span>Capture de valeur</span>',
+    'research.pub3.date': 'Mars 2026',
+    'research.pub3.desc': 'Une architecture d\'approvisionnement modulaire « colonne et côtes » qui équilibre l\'échelle des mégafournisseurs mondiaux avec des composantes locales souveraines et substituables — exécutée par l\'approvisionnement dynamique.',
+    'research.pub3.tags': '<span>Stratégie d\'approvisionnement</span><span>Souveraineté numérique</span><span>Résilience TI</span>',
+    'research.pub4.date': 'Janvier 2026',
+    'research.pub4.desc': 'Intégrer les plateformes low-code à l\'approvisionnement, à la planification et à l\'évaluation des fournisseurs afin que les opérations TI dépassent la résilience — et tirent de la valeur de la volatilité et du changement.',
+    'research.pub4.tags': '<span>Low-code (LCAP)</span><span>Évaluation des fournisseurs</span><span>Antifragilité</span>',
+    'research.speaking.type': 'Présentation en conférence · 2026',
+    'research.speaking.desc': 'Un breffage exécutif pour les dirigeants du secteur public sur l\'IA souveraine — la réalité du « bouton d\'arrêt », pourquoi la souveraineté est un spectre plutôt qu\'une case à cocher, et une feuille de route pragmatique pour l\'adoption de l\'IA au sein du gouvernement canadien.',
+    'research.speaking.tags': '<span>IA souveraine</span><span>Gouvernement et secteur public</span><span>Risque géopolitique</span><span>Canada</span>',
+    'research.note': 'Les notes de recherche complètes sont accessibles aux clients Gartner via gartner.com.',
 
     'exp.label': 'Carrière',
     'exp.title': 'Expérience professionnelle',
@@ -203,6 +247,14 @@ const translations = {
   }
 };
 
+// ===== Setup =====
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const hasGSAP = typeof gsap !== 'undefined';
+const useMotion = hasGSAP && !prefersReducedMotion;
+
+if (!useMotion) document.documentElement.classList.add('no-motion');
+if (hasGSAP && typeof ScrollTrigger !== 'undefined') gsap.registerPlugin(ScrollTrigger);
+
 // ===== Language toggle =====
 let currentLang = localStorage.getItem('lang') || 'en';
 
@@ -225,87 +277,41 @@ document.getElementById('lang-toggle').addEventListener('click', () => {
 });
 
 // ===== Mobile nav toggle =====
-const toggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
 
-toggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+navToggle.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  navToggle.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', open);
 });
 
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
-});
-
-// ===== Navbar background on scroll =====
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.style.background = window.scrollY > 60
-    ? 'rgba(13, 27, 42, 0.98)'
-    : 'rgba(13, 27, 42, 0.95)';
-});
-
-// ===== Fade-up scroll animations =====
-const fadeEls = document.querySelectorAll(
-  '.comp-card, .timeline-item, .about-pills, .contact-card, .lang-card, .about-text'
-);
-
-fadeEls.forEach(el => el.classList.add('fade-up'));
-
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-
-fadeEls.forEach(el => observer.observe(el));
-
-// ===== Gartner stat counter animation =====
-function animateCounter(el) {
-  const raw = el.textContent.trim();           // e.g. "14k+", "300+", "8+"
-  const suffix = raw.replace(/[\d.]/g, '');    // "+", "k+", etc.
-  const hasK   = suffix.includes('k');
-  const num    = parseFloat(raw);              // 14, 300, 8 …
-  const duration = 1600;
-  const start  = performance.now();
-
-  function tick(now) {
-    const progress = Math.min((now - start) / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 3);
-    const current = Math.floor(ease * num);
-    el.textContent = (hasK ? current + 'k' : current) + (raw.includes('+') ? '+' : '');
-    if (progress < 1) requestAnimationFrame(tick);
-    else el.textContent = raw; // restore exact original
-  }
-  requestAnimationFrame(tick);
-}
-
-const statObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.gartner-stat-num').forEach(animateCounter);
-      statObserver.unobserve(entry.target);
-    }
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
   });
-}, { threshold: 0.4 });
+});
 
-const statsEl = document.querySelector('.gartner-stats');
-if (statsEl) statObserver.observe(statsEl);
-
-// ===== Back-to-top button =====
+// ===== Navbar state + scroll progress + back-to-top =====
+const navbar = document.getElementById('navbar');
+const progressBar = document.getElementById('scroll-progress');
 const backToTop = document.getElementById('back-to-top');
 
-window.addEventListener('scroll', () => {
-  backToTop.classList.toggle('visible', window.scrollY > 400);
-});
+function onScroll() {
+  const y = window.scrollY;
+  navbar.classList.toggle('scrolled', y > 24);
+  backToTop.classList.toggle('visible', y > 480);
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.transform = 'scaleX(' + (max > 0 ? Math.min(y / max, 1) : 0) + ')';
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
 backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
 });
 
 // ===== Active nav link highlight =====
@@ -317,14 +323,365 @@ const sectionObserver = new IntersectionObserver(
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         navAnchors.forEach(a => {
-          a.style.color = a.getAttribute('href') === '#' + entry.target.id
-            ? '#c9a84c'
-            : '';
+          a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
         });
       }
     });
   },
-  { threshold: 0.4 }
+  { rootMargin: '-40% 0px -50% 0px' }
 );
 
 sections.forEach(s => sectionObserver.observe(s));
+
+// ===== three.js hero particle field =====
+(async function initHeroParticles() {
+  if (prefersReducedMotion) return;
+
+  const canvas = document.getElementById('hero-canvas');
+  const hero = document.getElementById('hero');
+  if (!canvas || !hero) return;
+
+  let THREE;
+  try {
+    THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js');
+  } catch (e) {
+    return; // CDN unavailable — CSS gradient background remains
+  }
+
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  } catch (e) {
+    return; // no WebGL — CSS gradient background remains
+  }
+
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
+  camera.position.z = 16;
+
+  const isSmall = window.matchMedia('(max-width: 700px)').matches;
+  const COUNT = isSmall ? 320 : 850;
+
+  const positions = new Float32Array(COUNT * 3);
+  const colors = new Float32Array(COUNT * 3);
+  const gold = new THREE.Color(0xe0b35a);
+  const blue = new THREE.Color(0x5b9cf6);
+  const white = new THREE.Color(0xaec3e0);
+
+  for (let i = 0; i < COUNT; i++) {
+    positions[i * 3]     = (Math.random() - 0.5) * 44;
+    positions[i * 3 + 1] = (Math.random() - 0.5) * 26;
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 22;
+
+    const r = Math.random();
+    const c = r < 0.22 ? gold : (r < 0.55 ? blue : white);
+    colors[i * 3] = c.r; colors[i * 3 + 1] = c.g; colors[i * 3 + 2] = c.b;
+  }
+
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+  // Soft round sprite — default points render as hard squares
+  const spriteCanvas = document.createElement('canvas');
+  spriteCanvas.width = spriteCanvas.height = 64;
+  const ctx = spriteCanvas.getContext('2d');
+  const grad = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+  grad.addColorStop(0, 'rgba(255,255,255,1)');
+  grad.addColorStop(0.35, 'rgba(255,255,255,.7)');
+  grad.addColorStop(1, 'rgba(255,255,255,0)');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, 64, 64);
+  const sprite = new THREE.CanvasTexture(spriteCanvas);
+
+  const material = new THREE.PointsMaterial({
+    size: 0.22,
+    map: sprite,
+    vertexColors: true,
+    transparent: true,
+    opacity: 0.8,
+    depthWrite: false,
+    blending: THREE.AdditiveBlending,
+    sizeAttenuation: true
+  });
+
+  const points = new THREE.Points(geometry, material);
+  scene.add(points);
+
+  // Constellation network: drifting nodes connected by faint lines (desktop only)
+  let network = null;
+  if (!isSmall) {
+    const N = 80;
+    const LINK_DIST = 4.6;
+    const nodeBase = new Float32Array(N * 3);
+    const nodePhase = new Float32Array(N);
+    const nodePos = new Float32Array(N * 3);
+
+    for (let i = 0; i < N; i++) {
+      nodeBase[i * 3]     = (Math.random() - 0.5) * 38;
+      nodeBase[i * 3 + 1] = (Math.random() - 0.5) * 22;
+      nodeBase[i * 3 + 2] = (Math.random() - 0.5) * 8;
+      nodePhase[i] = Math.random() * Math.PI * 2;
+    }
+
+    const nodeGeo = new THREE.BufferGeometry();
+    nodeGeo.setAttribute('position', new THREE.BufferAttribute(nodePos, 3).setUsage(THREE.DynamicDrawUsage));
+    const nodeMat = new THREE.PointsMaterial({
+      size: 0.16,
+      map: sprite,
+      color: 0x8fb6f0,
+      transparent: true,
+      opacity: 0.9,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending
+    });
+    const nodes = new THREE.Points(nodeGeo, nodeMat);
+
+    const maxPairs = (N * (N - 1)) / 2;
+    const linePos = new Float32Array(maxPairs * 6);
+    const lineGeo = new THREE.BufferGeometry();
+    lineGeo.setAttribute('position', new THREE.BufferAttribute(linePos, 3).setUsage(THREE.DynamicDrawUsage));
+    const lineMat = new THREE.LineBasicMaterial({
+      color: 0x6f9ddf,
+      transparent: true,
+      opacity: 0.13,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending
+    });
+    const lines = new THREE.LineSegments(lineGeo, lineMat);
+
+    const group = new THREE.Group();
+    group.add(nodes);
+    group.add(lines);
+    scene.add(group);
+
+    network = { N, LINK_DIST, nodeBase, nodePhase, nodePos, nodeGeo, lineGeo, linePos, group };
+  }
+
+  function updateNetwork(t) {
+    if (!network) return;
+    const { N, LINK_DIST, nodeBase, nodePhase, nodePos, nodeGeo, lineGeo, linePos, group } = network;
+
+    for (let i = 0; i < N; i++) {
+      const p = nodePhase[i];
+      nodePos[i * 3]     = nodeBase[i * 3]     + Math.sin(t * 0.22 + p) * 0.9;
+      nodePos[i * 3 + 1] = nodeBase[i * 3 + 1] + Math.cos(t * 0.18 + p * 1.4) * 0.7;
+      nodePos[i * 3 + 2] = nodeBase[i * 3 + 2] + Math.sin(t * 0.15 + p * 0.8) * 0.5;
+    }
+    nodeGeo.attributes.position.needsUpdate = true;
+
+    let v = 0;
+    const distSq = LINK_DIST * LINK_DIST;
+    for (let i = 0; i < N; i++) {
+      for (let j = i + 1; j < N; j++) {
+        const dx = nodePos[i * 3] - nodePos[j * 3];
+        const dy = nodePos[i * 3 + 1] - nodePos[j * 3 + 1];
+        const dz = nodePos[i * 3 + 2] - nodePos[j * 3 + 2];
+        if (dx * dx + dy * dy + dz * dz < distSq) {
+          linePos[v++] = nodePos[i * 3]; linePos[v++] = nodePos[i * 3 + 1]; linePos[v++] = nodePos[i * 3 + 2];
+          linePos[v++] = nodePos[j * 3]; linePos[v++] = nodePos[j * 3 + 1]; linePos[v++] = nodePos[j * 3 + 2];
+        }
+      }
+    }
+    lineGeo.setDrawRange(0, v / 3);
+    lineGeo.attributes.position.needsUpdate = true;
+
+    group.rotation.y = points.rotation.y;
+    group.rotation.x = points.rotation.x;
+  }
+
+  function resize() {
+    const w = hero.clientWidth;
+    const h = hero.clientHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Mouse parallax (desktop only — touch devices keep the slow drift)
+  let targetX = 0, targetY = 0;
+  window.addEventListener('pointermove', e => {
+    if (e.pointerType !== 'mouse') return;
+    targetX = (e.clientX / window.innerWidth - 0.5) * 1.6;
+    targetY = (e.clientY / window.innerHeight - 0.5) * 1.0;
+  }, { passive: true });
+
+  let rafId = null;
+  const clock = new THREE.Clock();
+
+  function animate() {
+    rafId = requestAnimationFrame(animate);
+    const t = clock.getElapsedTime();
+    points.rotation.y = t * 0.02;
+    points.rotation.x = Math.sin(t * 0.08) * 0.05;
+    updateNetwork(t);
+    camera.position.x += (targetX - camera.position.x) * 0.04;
+    camera.position.y += (-targetY - camera.position.y) * 0.04;
+    camera.lookAt(scene.position);
+    renderer.render(scene, camera);
+  }
+
+  // Only render while the hero is on screen
+  const visObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && rafId === null) {
+        clock.start();
+        animate();
+      } else if (!entry.isIntersecting && rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    });
+  }, { threshold: 0 });
+
+  visObserver.observe(hero);
+})();
+
+// ===== GSAP animations =====
+if (useMotion) {
+
+  // --- Hero entrance ---
+  const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+  heroTl
+    .from('.hero-photo-wrap', { opacity: 0, scale: 0.85, duration: 1 })
+    .from('.hero-eyebrow', { opacity: 0, y: 24, duration: .7 }, '-=.6')
+    .from('.hero-name-line', { opacity: 0, y: 60, duration: .9, stagger: .12 }, '-=.45')
+    .from('.hero-subtitle', { opacity: 0, y: 24, duration: .7 }, '-=.55')
+    .from('.hero-tags span', { opacity: 0, y: 16, duration: .5, stagger: .055 }, '-=.4')
+    .from('.hero-actions > *', { opacity: 0, y: 18, duration: .55, stagger: .1 }, '-=.3')
+    .from('.hero-scroll-hint', { opacity: 0, duration: .8 }, '-=.2');
+
+  // Subtle parallax: hero content drifts up as you scroll away
+  gsap.to('.hero-inner', {
+    yPercent: -12,
+    opacity: 0.35,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true
+    }
+  });
+
+  // --- Scroll reveals ---
+  function reveal(targets, opts) {
+    gsap.utils.toArray(targets).forEach(el => {
+      el.classList.add('gs-reveal');
+      gsap.fromTo(el,
+        { opacity: 0, y: opts.y ?? 36, x: opts.x ?? 0 },
+        {
+          opacity: 1, y: 0, x: 0,
+          duration: opts.duration ?? .8,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 86%' }
+        }
+      );
+    });
+  }
+
+  function revealBatch(targets, opts) {
+    const els = gsap.utils.toArray(targets);
+    els.forEach(el => el.classList.add('gs-reveal'));
+    ScrollTrigger.batch(els, {
+      start: 'top 88%',
+      once: true,
+      onEnter: batch => gsap.fromTo(batch,
+        { opacity: 0, y: opts.y ?? 32 },
+        { opacity: 1, y: 0, duration: .7, ease: 'power3.out', stagger: .09 }
+      )
+    });
+  }
+
+  reveal('.section-label', { y: 20, duration: .6 });
+  reveal('.section-title', { y: 30 });
+  reveal('.about-text', { y: 30 });
+  reveal('.about-pills', { y: 24 });
+  reveal('.gartner-spotlight', { y: 44 });
+  reveal('.topics-cloud', { y: 30 });
+  reveal('.research-intro', { y: 20, duration: .6 });
+  reveal('.speaking-card', { y: 40 });
+  reveal('.research-note', { y: 14, duration: .5 });
+  reveal('.contact-intro', { y: 20, duration: .6 });
+
+  revealBatch('.comp-card', { y: 36 });
+  revealBatch('.research-card', { y: 34 });
+  revealBatch('.timeline-item', { y: 30 });
+  revealBatch('.lang-card', { y: 32 });
+  revealBatch('.contact-card', { y: 30 });
+
+  // --- Desktop-only pointer flourishes: 3D card tilt + magnetic buttons ---
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+
+    document.querySelectorAll('.comp-card, .lang-card, .research-card, .contact-card:not(.no-link)')
+      .forEach(card => {
+        const rx = gsap.quickTo(card, 'rotationX', { duration: .45, ease: 'power2.out' });
+        const ry = gsap.quickTo(card, 'rotationY', { duration: .45, ease: 'power2.out' });
+        const lift = gsap.quickTo(card, 'y', { duration: .35, ease: 'power2.out' });
+
+        // Perspective applied on hover only — a permanent 3D layer per card
+        // strains the compositor with this many cards on the page
+        card.addEventListener('pointerenter', () => {
+          gsap.set(card, { transformPerspective: 900 });
+          lift(-5);
+        });
+        card.addEventListener('pointermove', e => {
+          const r = card.getBoundingClientRect();
+          ry(((e.clientX - r.left) / r.width - .5) * 8);
+          rx(-((e.clientY - r.top) / r.height - .5) * 8);
+        });
+        card.addEventListener('pointerleave', () => {
+          rx(0); ry(0); lift(0);
+          gsap.set(card, { clearProps: 'transformPerspective' });
+        });
+      });
+
+    document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+      const xTo = gsap.quickTo(btn, 'x', { duration: .35, ease: 'power3.out' });
+      const yTo = gsap.quickTo(btn, 'y', { duration: .35, ease: 'power3.out' });
+
+      btn.addEventListener('pointermove', e => {
+        const r = btn.getBoundingClientRect();
+        xTo((e.clientX - (r.left + r.width / 2)) * .3);
+        yTo((e.clientY - (r.top + r.height / 2)) * .4);
+      });
+      btn.addEventListener('pointerleave', () => {
+        gsap.to(btn, { x: 0, y: 0, duration: .7, ease: 'elastic.out(1, .45)' });
+      });
+    });
+  }
+
+  // --- Gartner stat counters ---
+  gsap.utils.toArray('.gartner-stat-num').forEach(el => {
+    const raw = el.textContent.trim();          // "8+", "300+", "14k+"
+    const hasK = raw.includes('k');
+    const hasPlus = raw.includes('+');
+    const target = parseFloat(raw);
+    const counter = { val: 0 };
+
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 88%',
+      once: true,
+      onEnter: () => {
+        gsap.to(counter, {
+          val: target,
+          duration: 1.6,
+          ease: 'power2.out',
+          onUpdate: () => {
+            el.textContent = Math.floor(counter.val) + (hasK ? 'k' : '') + (hasPlus ? '+' : '');
+          },
+          onComplete: () => { el.textContent = raw; }
+        });
+      }
+    });
+  });
+
+  // Recalculate trigger positions once everything (fonts/images) has loaded
+  window.addEventListener('load', () => ScrollTrigger.refresh());
+}

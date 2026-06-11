@@ -6,44 +6,51 @@
   <title>Delete My Data – FitnessTracker</title>
   <meta name="description" content="Request deletion of your FitnessTracker account and all associated data." />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#060a13" />
   <link rel="canonical" href="https://www.nathandavie.com/delete-data" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <style>
-    .delete-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #0f2a45 100%);
-      padding: 7rem 2rem 4rem;
+    .page-hero {
+      padding: calc(var(--nav-h) + 4rem) 2rem 4rem;
       text-align: center;
       position: relative;
       overflow: hidden;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 0%, rgba(91,156,246,.1) 0%, transparent 60%),
+        var(--bg);
+      border-bottom: 1px solid var(--border);
     }
-    .delete-hero::before {
+    .page-hero .section-label { justify-content: center; }
+    .page-hero .section-label::after {
       content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 50% 60%, rgba(29,95,168,.2) 0%, transparent 65%);
-      pointer-events: none;
+      width: 28px;
+      height: 2px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold));
     }
-    .delete-hero .section-label { color: var(--gold); }
-    .delete-hero h1 {
-      font-family: 'Playfair Display', serif;
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
       font-size: clamp(2rem, 5vw, 3rem);
-      color: #fff;
+      letter-spacing: -.015em;
+      color: var(--text);
       margin-bottom: .75rem;
     }
-    .delete-hero p {
-      color: rgba(255,255,255,.6);
+    .page-hero p {
+      color: var(--text-mut);
       font-size: 1rem;
       max-width: 520px;
       margin: 0 auto;
     }
 
-    .delete-content {
-      max-width: 640px;
+    .page-content {
+      max-width: 680px;
       margin: 0 auto;
-      padding: 4rem 2rem 5rem;
+      padding: 4rem 1.5rem 5rem;
     }
 
     .back-link {
@@ -53,32 +60,33 @@
       font-size: .875rem;
       font-weight: 600;
       color: var(--gold);
-      margin-bottom: 2.5rem;
-      transition: opacity .2s;
+      margin-bottom: 2rem;
+      transition: opacity var(--transition);
     }
     .back-link:hover { opacity: .75; }
 
     .info-card {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 10px 10px 0;
+      background: var(--blue-soft);
+      border: 1px solid rgba(91,156,246,.3);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
       padding: 1.25rem 1.5rem;
       margin-bottom: 2rem;
     }
     .info-card p {
       font-size: .925rem;
-      color: var(--navy);
+      color: var(--text);
       line-height: 1.7;
       margin: 0;
     }
+    .info-card strong { color: var(--text); }
 
-    .steps {
-      margin-bottom: 2.5rem;
-    }
-    .steps h2 {
+    .steps { margin-bottom: 2.5rem; }
+    .steps h2, .what-gets-deleted h2 {
+      font-family: var(--font-display);
       font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--navy);
+      font-weight: 600;
+      color: var(--text);
       margin-bottom: 1.25rem;
     }
     .step {
@@ -92,8 +100,8 @@
       width: 28px;
       height: 28px;
       border-radius: 50%;
-      background: var(--blue);
-      color: #fff;
+      background: linear-gradient(135deg, var(--gold), #b8893a);
+      color: #14100a;
       font-size: .8rem;
       font-weight: 700;
       display: flex;
@@ -103,40 +111,42 @@
     }
     .step-text {
       font-size: .95rem;
-      color: var(--text);
+      color: var(--text-mut);
       line-height: 1.6;
     }
-    .step-text strong { color: var(--navy); }
+    .step-text strong { color: var(--text); }
 
     .cta-btn {
       display: inline-flex;
       align-items: center;
       gap: .6rem;
-      background: var(--blue);
-      color: #fff;
+      background: linear-gradient(135deg, var(--gold), #c89a44);
+      color: #14100a;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: .95rem;
       padding: .95rem 2.25rem;
       border-radius: 100px;
-      transition: background .2s, transform .2s, box-shadow .2s;
+      box-shadow: 0 8px 28px rgba(224,179,90,.25);
+      transition: transform var(--transition), box-shadow var(--transition);
       margin-bottom: 1rem;
     }
     .cta-btn:hover {
-      background: var(--blue-lt);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(29,95,168,.3);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(224,179,90,.4);
     }
 
     .manual-email {
       font-size: .875rem;
-      color: var(--text-lt);
+      color: var(--text-dim);
       margin-top: .5rem;
+      line-height: 1.7;
     }
     .manual-email a {
       color: var(--blue);
       text-decoration: underline;
       text-underline-offset: 3px;
     }
+    .manual-email em { color: var(--text-mut); }
 
     .divider {
       border: none;
@@ -144,19 +154,13 @@
       margin: 2.5rem 0;
     }
 
-    .what-gets-deleted h2 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 1rem;
-    }
     .what-gets-deleted ul {
       list-style: none;
       padding: 0;
     }
     .what-gets-deleted ul li {
       font-size: .925rem;
-      color: var(--text);
+      color: var(--text-mut);
       padding-left: 1.5rem;
       position: relative;
       margin-bottom: .55rem;
@@ -166,44 +170,49 @@
       content: '✓';
       position: absolute;
       left: 0;
-      color: #22c55e;
+      color: #4ade80;
       font-weight: 700;
     }
 
     .timeline-note {
       margin-top: 1.5rem;
       font-size: .875rem;
-      color: var(--text-lt);
+      color: var(--text-dim);
       line-height: 1.6;
     }
-    .timeline-note strong { color: var(--text); }
+    .timeline-note strong { color: var(--text-mut); }
+
+    footer .footer-links a { color: var(--text-dim); transition: color var(--transition); }
+    footer .footer-links a:hover { color: var(--text-mut); }
   </style>
 </head>
 <body>
 
   <!-- ===== NAVIGATION ===== -->
-  <nav id="navbar">
+  <nav id="navbar" class="scrolled">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">Nathan Davie</a>
-      <ul class="nav-links">
+      <a href="/" class="nav-logo"><span class="nav-logo-mark">N</span>athan Davie</a>
+      <ul class="nav-links" id="nav-links">
         <li><a href="/#about">About</a></li>
         <li><a href="/#contact">Contact</a></li>
       </ul>
       <div class="nav-right">
-        <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
 
   <!-- ===== HERO ===== -->
-  <div class="delete-hero">
+  <div class="page-hero">
     <div class="section-label">FitnessTracker</div>
     <h1>Delete My Account &amp; Data</h1>
     <p>Submit a request to permanently delete your account and all associated data from FitnessTracker.</p>
   </div>
 
   <!-- ===== CONTENT ===== -->
-  <main class="delete-content">
+  <main class="page-content">
 
     <a href="/privacy" class="back-link">&#8592; Privacy Policy</a>
 
@@ -269,23 +278,34 @@
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&copy; 2026 Nathan Davie. All rights reserved.
-      &nbsp;·&nbsp; <a href="/privacy" style="color:rgba(255,255,255,.5);">Privacy Policy</a>
-      &nbsp;·&nbsp; <a href="/delete-data" style="color:rgba(255,255,255,.5);">Delete My Data</a>
+    <p class="footer-links">&copy; 2026 Nathan Davie. All rights reserved.
+      &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a>
+      &nbsp;·&nbsp; <a href="/delete-data">Delete My Data</a>
     </p>
   </footer>
 
-  <button class="back-to-top" id="back-to-top" aria-label="Back to top">&#8679;</button>
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
 
   <script>
     const backToTop = document.getElementById('back-to-top');
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
     window.addEventListener('scroll', () => {
       backToTop.classList.toggle('visible', window.scrollY > 400);
-    });
+    }, { passive: true });
+
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    navToggle?.addEventListener('click', () => navLinks?.classList.toggle('open'));
+
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', open);
+    });
   </script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

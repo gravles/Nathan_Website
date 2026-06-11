@@ -6,84 +6,100 @@
   <title>Privacy Policy – FitnessTracker</title>
   <meta name="description" content="Privacy Policy for the FitnessTracker app by Nathan Davie." />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#060a13" />
   <link rel="canonical" href="https://www.nathandavie.com/privacy" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <style>
-    .privacy-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #0f2a45 100%);
-      padding: 7rem 2rem 4rem;
+    .page-hero {
+      padding: calc(var(--nav-h) + 4rem) 2rem 4rem;
       text-align: center;
       position: relative;
       overflow: hidden;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 0%, rgba(91,156,246,.1) 0%, transparent 60%),
+        var(--bg);
+      border-bottom: 1px solid var(--border);
     }
-    .privacy-hero::before {
+    .page-hero .section-label { justify-content: center; }
+    .page-hero .section-label::after {
       content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 50% 60%, rgba(29,95,168,.2) 0%, transparent 65%);
-      pointer-events: none;
+      width: 28px;
+      height: 2px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold));
     }
-    .privacy-hero .section-label { color: var(--gold); }
-    .privacy-hero h1 {
-      font-family: 'Playfair Display', serif;
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
       font-size: clamp(2rem, 5vw, 3rem);
-      color: #fff;
-      margin-bottom: .75rem;
+      letter-spacing: -.015em;
+      color: var(--text);
+      margin-bottom: .5rem;
     }
-    .privacy-hero .meta {
+    .page-hero .meta {
       font-size: .85rem;
-      color: rgba(255,255,255,.45);
+      color: var(--text-dim);
       margin-top: .5rem;
     }
-    .privacy-content {
-      max-width: 760px;
+    .page-content {
+      max-width: 800px;
       margin: 0 auto;
-      padding: 4rem 2rem 5rem;
+      padding: 4rem 1.5rem 5rem;
     }
-    .privacy-content h2 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin: 2.5rem 0 .75rem;
-      padding-bottom: .4rem;
-      border-bottom: 2px solid var(--border);
+    .page-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem 2.5rem;
     }
-    .privacy-content h2:first-of-type { margin-top: 0; }
-    .privacy-content p {
-      font-size: .975rem;
+    .page-content h2 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
       color: var(--text);
+      margin: 2.5rem 0 .75rem;
+      padding-bottom: .5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-content h2:first-of-type { margin-top: 0; }
+    .page-content p {
+      font-size: .95rem;
+      color: var(--text-mut);
       line-height: 1.85;
       margin-bottom: 1rem;
     }
-    .privacy-content ul {
+    .page-content strong { color: var(--text); }
+    .page-content ul {
       list-style: none;
       padding: 0;
       margin-bottom: 1rem;
     }
-    .privacy-content ul li {
-      font-size: .975rem;
-      color: var(--text);
+    .page-content ul li {
+      font-size: .95rem;
+      color: var(--text-mut);
       padding-left: 1.25rem;
       position: relative;
-      margin-bottom: .5rem;
+      margin-bottom: .55rem;
       line-height: 1.7;
     }
-    .privacy-content ul li::before {
+    .page-content ul li::before {
       content: '›';
       position: absolute;
       left: 0;
-      color: var(--blue);
+      color: var(--gold);
       font-weight: 700;
     }
-    .privacy-content a {
+    .page-content a {
       color: var(--blue);
       text-decoration: underline;
       text-underline-offset: 3px;
+      transition: color var(--transition);
     }
-    .privacy-content a:hover { color: var(--blue-lt); }
+    .page-content a:hover { color: #8ebbf9; }
     .back-link {
       display: inline-flex;
       align-items: center;
@@ -91,50 +107,61 @@
       font-size: .875rem;
       font-weight: 600;
       color: var(--gold);
-      margin-bottom: 2.5rem;
-      transition: color .2s;
+      margin-bottom: 2rem;
+      text-decoration: none !important;
+      transition: opacity var(--transition);
     }
     .back-link:hover { color: var(--gold); opacity: .8; }
     .highlight-box {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
+      background: var(--blue-soft);
+      border: 1px solid rgba(91,156,246,.3);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
       padding: 1rem 1.25rem;
       margin: 1.25rem 0;
     }
-    .highlight-box p { margin-bottom: 0; color: var(--navy); font-size: .9rem; }
+    .highlight-box p { margin-bottom: 0; color: var(--text); font-size: .9rem; }
+    footer .footer-links a { color: var(--text-dim); transition: color var(--transition); }
+    footer .footer-links a:hover { color: var(--text-mut); }
+    @media (max-width: 700px) {
+      .page-card { padding: 1.75rem 1.25rem; }
+    }
   </style>
 </head>
 <body>
 
   <!-- ===== NAVIGATION ===== -->
-  <nav id="navbar">
+  <nav id="navbar" class="scrolled">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">Nathan Davie</a>
-      <ul class="nav-links">
+      <a href="/" class="nav-logo"><span class="nav-logo-mark">N</span>athan Davie</a>
+      <ul class="nav-links" id="nav-links">
         <li><a href="/#about">About</a></li>
         <li><a href="/#competencies">Competencies</a></li>
-        <li><a href="/#topics">Topics</a></li>
+        <li><a href="/#research">Research</a></li>
         <li><a href="/#experience">Experience</a></li>
         <li><a href="/#contact">Contact</a></li>
       </ul>
       <div class="nav-right">
-        <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
 
   <!-- ===== HERO ===== -->
-  <div class="privacy-hero">
+  <div class="page-hero">
     <div class="section-label">Legal</div>
     <h1>Privacy Policy</h1>
     <p class="meta">FitnessTracker &nbsp;·&nbsp; Last updated: May 2026</p>
   </div>
 
   <!-- ===== CONTENT ===== -->
-  <main class="privacy-content">
+  <main class="page-content">
 
     <a href="/" class="back-link">&#8592; Back to nathandavie.com</a>
+
+    <div class="page-card">
 
     <p>
       This Privacy Policy describes how <strong>FitnessTracker</strong> ("the App"), developed by
@@ -230,32 +257,40 @@
       <li><strong>Website:</strong> <a href="https://www.nathandavie.com">www.nathandavie.com</a></li>
     </ul>
 
+    </div>
+
   </main>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&copy; 2026 Nathan Davie. All rights reserved.
-      &nbsp;·&nbsp; <a href="/privacy" style="color:rgba(255,255,255,.5);">Privacy Policy</a>
-      &nbsp;·&nbsp; <a href="/delete-data" style="color:rgba(255,255,255,.5);">Delete My Data</a>
+    <p class="footer-links">&copy; 2026 Nathan Davie. All rights reserved.
+      &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a>
+      &nbsp;·&nbsp; <a href="/delete-data">Delete My Data</a>
     </p>
   </footer>
 
-  <button class="back-to-top" id="back-to-top" aria-label="Back to top">&#8679;</button>
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
 
   <script>
-    // Minimal script — navbar scroll + mobile toggle + back-to-top
-    const navbar = document.getElementById('navbar');
     const backToTop = document.getElementById('back-to-top');
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
 
     window.addEventListener('scroll', () => {
       backToTop.classList.toggle('visible', window.scrollY > 400);
-    });
+    }, { passive: true });
 
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    navToggle?.addEventListener('click', () => navLinks?.classList.toggle('open'));
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', open);
+    });
   </script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
